@@ -1,4 +1,4 @@
-myJson = {
+myJSON = {
     "type": "FeatureCollection",
     "features": [
         {
