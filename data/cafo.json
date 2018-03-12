@@ -1,4 +1,4 @@
-myJSON = {
+var myJSON = {
     "type": "FeatureCollection",
     "features": [
         {
