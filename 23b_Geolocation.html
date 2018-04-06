@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="LA 458/558 23b Geolocation">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Geolocation</title>
+	
+	<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<style id="jsbin-css">
+html, body {
+    height:100%;
+    margin:0;
+    padding:0;
+}
+</style>
+</head>
+<body>
+	<button onclick="getLocation()">Get location</button>
+	
+	<div id = "myLocation">my location is not set</div>
+<script id="jsbin-javascript">
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        $("#myLocation").html("Geolocation is not supported by this browser.");
+    }
+}
+function showPosition(position) {
+	 $("#myLocation").html("Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude);
+}
+</script>
+
+
+<script id="jsbin-source-css" type="text/css">html, body {
+    height:100%;
+    margin:0;
+    padding:0;
+}</script>
+
+<script id="jsbin-source-javascript" type="text/javascript">function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        $("#myLocation").html("Geolocation is not supported by this browser.");
+    }
+}
+function showPosition(position) {
+	 $("#myLocation").html("Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude);
+}</script></body>
+</html>
