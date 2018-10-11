@@ -1,2 +1,2 @@
 # LA558
-primary repository for the class
+The primary repository for the Web Mapping class.
