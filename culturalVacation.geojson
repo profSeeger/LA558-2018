@@ -1,0 +1,95 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "traveler": "Chris Seeger",
+        "place": "Aztec UFO Crash site",
+        "month": "March"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -107.83947944641113,
+          36.87869374595874
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "traveler": "Chris Seeger",
+        "place": " Knife River Indian Villages National Historic Site",
+        "month": "September"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.38857364654541,
+          47.361487308599614
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "traveler": "Chris Seeger",
+        "place": "Old Quebec",
+        "month": "July"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.20816469192505,
+          46.81267562170641
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "traveler": "Chris Seeger",
+        "place": "Mesa Verde National Park",
+        "month": "May"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.4547996520996,
+          37.27815067348501
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "traveler": "Chris Seeger",
+        "place": "Tikal, Guatemala",
+        "month": "March"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.62182998657227,
+          17.22016720103483
+        ]
+      }
+    }
+  ]
+}
