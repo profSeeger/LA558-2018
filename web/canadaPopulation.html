@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris Highchart Canada demo</title>
+    <meta name="description" content="LA 558 Demo of Highcharts Canada.">
+    <meta name="author" content="LA 558 Project">
+
+    <!-- your icons here - optional... -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <style>
+      #container {
+        height: 500px;
+        min-width: 310px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .loading {
+        margin-top: 10em;
+        text-align: center;
+        color: gray;
+      }
+
+    </style>
+
+
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/mapdata/countries/ca/ca-all.js"></script>
+
+
+  </head>
+
+  <body>
+    <div id="container"></div>
+
+
+
+    <script>
+      //Note Chris added the next several lines to turn the commas on in the tooltip when the populatin is displayed. Otherwise there was a spave seperating the thousands.
+      Highcharts.setOptions({
+        lang: {
+          decimalPoint: '.',
+          thousandsSep: ','
+        }
+      });
+
+
+      // Prepare demo data
+      // Data is joined to map using value of 'hc-key' property by default.
+      // See API docs for 'joinBy' for more info on linking data and map.
+      var data = [
+        ['ca-5682', 0],
+        ['ca-bc', 5000879],
+        ['ca-nu', 36858],
+        ['ca-nt', 41070],
+        ['ca-ab', 4262635],
+        ['ca-nl', 510550],
+        ['ca-sk', 1132505],
+        ['ca-mb', 1342153],
+        ['ca-qc', 8501833],
+        ['ca-on', 14223942],
+        ['ca-nb', 775610],
+        ['ca-ns', 969383],
+        ['ca-pe', 154331],
+        ['ca-yt', 40232]
+      ];
+
+      // Create the chart
+      Highcharts.mapChart('container', {
+        chart: {
+          map: 'countries/ca/ca-all'
+        },
+
+        title: {
+          text: 'Population of Canada by province and territory'
+        },
+
+        subtitle: {
+          text: '<b>Map by Professor Seeger - February 2022 </b><br>'+
+			'Source map: <a href="https://code.highcharts.com/mapdata/countries/ca/ca-all.js">Canada</a><br>'+
+			'Data: <a https://en.wikipedia.org/wiki/Population_of_Canada_by_province_and_territory">Wikipedia Canada Census 2021</a>'
+			
+        },
+
+        mapNavigation: {
+          enabled: true,
+          buttonOptions: {
+            verticalAlign: 'bottom'
+          }
+        },
+
+        colorAxis: {
+          min: 0,
+          max: 10000000
+        },
+
+
+        series: [{
+          data: data,
+          name: 'Census 2021 Population',
+          states: {
+            hover: {
+              color: '#BADA55'
+            }
+          },
+          dataLabels: {
+            enabled: true,
+            format: '{point.name}'
+          }
+        }]
+      });
+
+    </script>
+
+  </body>
+
+</html>
